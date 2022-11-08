@@ -1,0 +1,40 @@
+[
+  {
+    "img": "https://i.ibb.co/jymBxR6/Facial-hair-removal.jpg",
+    "title": "Facial hair removal",
+    "price": 30,
+    "details": "Of all the beauty treatments out there, removing your facial hair is one of the least pleasant activities. “Almost everyone has some facial hair,” explains April Franzino, GH beauty director. “It tends to be lighter-colored and less coarse than other body hair.”"
+  },
+
+  {
+    "img": "https://i.ibb.co/Jz4Myxp/PRP.jpg",
+    "title": "PRP",
+    "price": 45,
+    "details": "PRP stands for Platelet Rich Plasma. PRP therapy is a method of delivering special proteins to the hair follicles. 🗣️ How is it done? 👉👉 In this procedure, blood is taken from your body with a syringe and it is applied to the platelets (the colorless white part of the blood). Then this plasma is part of the health blood to be applied to the roots of your hair."
+  },
+
+  {
+    "img": "https://i.ibb.co/bLw2cRQ/Microdermabrasion.jpg",
+    "title": "Microdermabrasion",
+    "price": 35,
+    "details": "For those of us who are incredibly busy all day and don't have time for regular facials, the ideal facial is the Hydra Facial. It is a procedure that makes our skin smoother and brighter and more attractive. Microdermabrasion is a popular treatment all over the world that is completely side-effect free and pain free"
+  },
+  {
+    "img": "https://i.ibb.co/XVYw0yc/Microneedling-therapy.jpg",
+    "title": "Microneedling therapy",
+    "price": 60,
+    "details": "Helps stimulate your dead cells with needles of specific size. This results in the formation of new cells and tissue and helps your wound heal. Does it hurt? Before microneedling, local anesthetics are taken first so that there is no pain at all. Microneedling is done for the following reasons"
+  },
+  {
+    "img": "https://i.ibb.co/37T03V9/DENTAL-FILLINGS.jpg",
+    "title": "DENTAL FILLINGS",
+    "price": 45,
+    "details": "Fillings are used to fill the inside of a tooth when it has a hole as a result of cavities, congenital defects, or has been damaged from dental trauma. By filling the tooth, we can restore the health, structure, and function of the tooth. Fillings are the gold standard restorative treatment for cavities that haven’t reached deep into the tooth."
+  },
+  {
+    "img": "https://i.ibb.co/bdwDLQW/Light-Therapy-Treatments.jpg",
+    "title": "Light Therapy Treatments",
+    "price": 45,
+    "details": "LED (light-emitting diode) light therapy is a non-invasive treatment that enters the skin's layers to improve the skin. In the 1990s, NASA began studying LED's effects in promoting wound healing in astronauts by helping cells and tissues grow"
+  }
+]
