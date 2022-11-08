@@ -19,7 +19,20 @@ const client = new MongoClient(uri, {
   useUnifiedTopology: true,
   serverApi: ServerApiVersion.v1,
 });
-
+async function run() {
+  try {
+    const OurServices = client.db("assigement11").collection("medicalSerivces");
+    app.get("/services", async (req, res) => {
+      const query = {};
+      const cursor = OurServices.find(query);
+      const services = await cursor.toArray();
+      const count = await OurServices.estimatedDocumentCount();
+      res.send({ count, services });
+    });
+  } finally {
+  }
+}
+run().catch(console.dir);
 // mongo conect end
 
 app.get("/", (req, res) => {
