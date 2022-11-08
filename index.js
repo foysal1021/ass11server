@@ -22,13 +22,23 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     const OurServices = client.db("assigement11").collection("medicalSerivces");
+    // all services start
     app.get("/services", async (req, res) => {
       const query = {};
       const cursor = OurServices.find(query);
       const services = await cursor.toArray();
       const count = await OurServices.estimatedDocumentCount();
       res.send({ count, services });
-    });
+    }); // all services end
+
+    // 3 services start
+    app.get("/services3", async (req, res) => {
+      const query = {};
+      const cursor = OurServices.find(query);
+      const services = await cursor.limit(3).toArray();
+      const count = await OurServices.estimatedDocumentCount();
+      res.send({ count, services });
+    }); // 3 services end
   } finally {
   }
 }
