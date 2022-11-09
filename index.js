@@ -59,6 +59,25 @@ async function run() {
     });
     // added review end
 
+    // // all services start
+    // app.get("/services", async (req, res) => {
+    //   const query = {};
+    //   const cursor = OurServices.find(query);
+    //   const services = await cursor.toArray();
+    //   const count = await OurServices.estimatedDocumentCount();
+    //   res.send({ count, services });
+    // }); // all services end
+
+    // get review start
+    app.get("/review", async (req, res) => {
+      const query = {};
+      const cursor = servicesREVIEW.find(query);
+      const review = await cursor.toArray();
+      const count = await servicesREVIEW.estimatedDocumentCount();
+      res.send({ count, review });
+    });
+    // get review end
+
     // service details - specipic start(id) - end
   } finally {
   }
