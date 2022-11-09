@@ -33,6 +33,14 @@ async function run() {
       res.send({ count, services });
     }); // all services end
 
+    // add product start
+    app.post("/services", async (req, res) => {
+      const service = req.body;
+      const result = await OurServices.insertOne(service);
+      res.send(result);
+    });
+    // add product end
+
     // 3 services start
     app.get("/services3", async (req, res) => {
       const query = {};
