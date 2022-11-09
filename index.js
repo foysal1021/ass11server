@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const port = 5000 || process.env.PROT;
 var cors = require("cors");
-const { MongoClient, ServerApiVersion } = require("mongodb");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 require("dotenv").config();
 
 //midle were start
@@ -39,6 +39,15 @@ async function run() {
       const count = await OurServices.estimatedDocumentCount();
       res.send({ count, services });
     }); // 3 services end
+
+    // service details - specipic start(id) - start
+    app.get("/services/:id", async (req, res) => {
+      const id = req.params.id;
+      const querys = { _id: ObjectId(id) };
+      const result = await OurServices.findOne(querys);
+      res.send(result);
+    });
+    // service details - specipic start(id) - end
   } finally {
   }
 }
