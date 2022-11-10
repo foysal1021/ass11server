@@ -2,7 +2,12 @@ const express = require("express");
 const app = express();
 const port = 5000 || process.env.PROT;
 var cors = require("cors");
-const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
+const {
+  MongoClient,
+  ServerApiVersion,
+  ObjectId,
+  ObjectID,
+} = require("mongodb");
 require("dotenv").config();
 
 //midle were start
@@ -81,6 +86,15 @@ async function run() {
       res.send({ count, review });
     });
     // get review end
+
+    // review delete start
+    app.delete("/review/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: ObjectId(id) };
+      const result = await servicesREVIEW.deleteOne(query);
+      res.send(result);
+    });
+    // review delete end
 
     // service details - specipic start(id) - end
   } finally {
