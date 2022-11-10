@@ -61,24 +61,20 @@ async function run() {
     // added review start
     app.post("/review", async (req, res) => {
       const review = req.body;
-      console.log(review);
       const result = await servicesREVIEW.insertOne(review);
       res.send(result);
     });
     // added review end
 
-    // // all services start
-    // app.get("/services", async (req, res) => {
-    //   const query = {};
-    //   const cursor = OurServices.find(query);
-    //   const services = await cursor.toArray();
-    //   const count = await OurServices.estimatedDocumentCount();
-    //   res.send({ count, services });
-    // }); // all services end
-
     // get review start
     app.get("/review", async (req, res) => {
-      const query = {};
+      let query = {};
+
+      if (req.query.email) {
+        query = {
+          email: req.query.email,
+        };
+      }
       const cursor = servicesREVIEW.find(query);
       const review = await cursor.toArray();
       const count = await servicesREVIEW.estimatedDocumentCount();
