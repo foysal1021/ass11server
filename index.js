@@ -96,6 +96,23 @@ async function run() {
     });
     // review delete end
 
+    // updated review start
+    app.patch("/review/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: ObjectId(id) };
+
+      const status = req.body.status;
+      const updatedDoc = {
+        $set: {
+          status: status,
+        },
+      };
+      const result = await servicesREVIEW.updateOne(query, updatedDoc);
+
+      res.send(result);
+    });
+    // updated review start
+
     // service details - specipic start(id) - end
   } finally {
   }
